@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+		margin: 0;
+		padding: 0;
+  	box-sizing: border-box;
+  	text-decoration: none;
+  	font-family: 'Poppins', sans-serif;
+}
+body{
+  	display: flex;
+  	/*align-items: center;*/
+  	justify-content: center;
+  	height: auto;
+  	margin-top: 5%;
+  	background: #f7f7f7;
+  	padding: 0 10px;
+}
+.wrapper{
+  	background: #fff;
+  	max-width: 70%;
+  	width: 100%;
+  	border-radius: 16px;
+  	box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+/* Login & Signup Form CSS */
+.form{
+  	padding: 25px 30px;
+}
+.form header{
+  	font-size: 25px;
+  	font-weight: 600;
+  	padding-bottom: 10px;
+  	border-bottom: 1px solid #e6e6e6;
+}
+.form form{
+	margin: 20px 0;
+}
+.form form .error-text{
+  	color: #721c24;
+  	padding: 8px 10px;
+  	text-align: center;
+  	border-radius: 5px;
+  	background: #f8d7da;
+  	border: 1px solid #f5c6cb;
+  	margin-bottom: 10px;
+  	display: none;
+}
+.form form .name-details{
+  	display: flex;
+}
+.form .name-details .field:first-child{
+  	margin-right: 3%;
+  	width: 50%;
+}
+.form .name-details .field:last-child{
+  	margin-left: 3%;
+  	width: 50%;
+}
+.form form .field{
+  	display: flex;
+  	margin-bottom: 10px;
+  	flex-direction: column;
+  	position: relative;
+}
+.form form .field label{
+  	margin-bottom: 2px;
+}
+.form form .input input{
+  	height: 40px;
+  	width: 100%;
+  	font-size: 16px;
+  	padding: 0 10px;
+  	border-radius: 5px;
+  	border: 1px solid #ccc;
+}
+.form form .field input{
+  	outline: none;
+}
+.form form .image input{
+  	font-size: 17px;
+}
+.form form .button input{
+  	height: 45px;
+  	border: none;
+  	color: #fff;
+  	font-size: 17px;
+  	background: #333;
+  	border-radius: 5px;
+  	cursor: pointer;
+  	margin-top: 13px;
+}
+.form form .field i{
+  	position: absolute;
+  	right: 15px;
+  	top: 70%;
+  	color: #ccc;
+  	cursor: pointer;
+  	transform: translateY(-50%);
+}
+.form form .field i.active::before{
+  	color: #333;
+  	content: "\f070";
+}
+.form .link{
+  	text-align: center;
+  	margin: 10px 0;
+  	font-size: 17px;
+}
+.form .link a{
+  	color: #333;
+}
+.form .link a:hover{
+  	text-decoration: underline;
+}
+.users{
+	padding: 25px 30px;
+}
+.users header,.users-list a{
+	display: flex;
+	align-items: center;
+	padding-bottom: 20px;
+	justify-content: space-between;
+	border-bottom: 1px solid #e6e6e6;
+}
+.wrapper img{
+	object-fit: cover;
+	border-radius: 50%;
+}
+:is(.users,.users-list) .content{
+	display: flex;
+	align-items: center;
+}
+.users header .content img{
+	height: 50px;
+	width: 50px;
+}
+:is(.users,.users-list) .details{
+	color: #000;
+	margin-left:15px ;
+}
+:is(.users,.users-list).details span{
+	font-size: 18px;
+	font-weight: 500;
+}
+.users header .logout{
+	color: #fff;
+	padding: 7px 15px;
+	font-size: 17px;
+	border-radius:5px ;
+	background: #333;
+}
+.users .search{
+	margin: 20px 0;
+	display: flex;
+	position: relative;
+	align-items: center;
+
+}
+.users .search .text{
+	font-size: 18px;
+}
+.users .search input{
+  position: absolute;
+  height: 42px;
+  width: calc(100% - 50px);
+  font-size: 16px;
+  padding: 0 13px;
+  border: 1px solid #e6e6e6;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+.users .search input.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+.users .search button{
+  position: relative;
+  z-index: 1;
+  width: 47px;
+  height: 42px;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  color: #333;
+  outline: none;
+  margin-left: auto;
+  border-radius: 0 5px 5px 0;
+  transition: all 0.2s ease;
+}
+.users .search button.active{
+  background: #333;
+  color: #fff;
+}
+.search button.active i::before{
+  content: '\f00d';
+}
+.users-list{
+	max-height: 400px;
+	overflow-y: auto;
+}
+:is(.users-list, .chat-box)::-webkit-scrollbar{
+  width: 0px;
+}
+.users-list a{
+	margin-bottom: 10px;
+	page-break-after: 1;
+	padding-right: 15px;
+	border-bottom-color: #f1f1f1;
+}
+.users-list a:last-child{
+	border: none;
+	margin-bottom: 0px;
+}
+.users-list a .content img{
+
+	height: 40px;
+	width: 40px;
+}
+.users-list a .content p{
+	margin-top: 10px;
+	color: #67676a;
+}
+.users-list a .status-dot{
+	font-size: 12px;
+}
+.users-list a .status-dot .offline{
+	color: #ccc;
+}
+.title{
+	position: relative;
+	top: 5%;
+	left: 40%;
+}
+.chat-area header{
+	display: flex;
+	align-items: center;
+	padding: 18px 30px;
+}
+.chat-area header .back-icon{
+	font-size: 18px;
+	color: #333;
+	cursor: pointer;
+}
+.chat-area header img{
+	height: 45px;
+	width: 45px;
+	margin: 0 15px;
+}
+.chat-area header span{
+	font-size: 17px;
+	font-weight: 500;
+}
+.chat-box{
+	height: 420px;
+	background: #f7f7f7;
+	padding: 10px 30px 20px 30px;
+	overflow-y: auto;
+	box-shadow: inset 0 32px 32px -32px rgba(0, 0, 0, 0.1),inset 0 -32px 32px -32px rgba(0, 0, 0, 0.1);
+}
+.chat-box .chat{
+	margin: 15px 0;
+}
+.chat-box .chat p{
+	word-wrap: break-word;
+	padding: 8px 16px;
+	box-shadow:0 0 32px rgba(0, 0, 0, 0.1),0 16px 16px -16px rgba(0, 0, 0, 0.2);
+}
+.chat-box .outgoing{
+	display: flex;
+}
+.outgoing .details{
+	margin-left: auto;
+	max-width: calc(100% - 100px);
+}
+.outgoing .details p{
+	background-color:#a84176;
+	color: #fff;
+	border-radius: 20px 0 20px 20px;
+}
+.chat-box .incoming{
+	display: flex;
+}
+.chat-box .incoming img{
+	height: 350x;
+	width: 35px;
+}
+.incoming .details{
+	margin-left: 10px;
+	margin-right: auto;
+	max-width: calc(100% - 100px);
+}
+.incoming .details p{
+	background: white;
+	color: black;
+	border-radius: 0 20px 20px 20px;
+}
+.chat-area .typing-area{
+	padding: 18px 30px;
+	display: flex;
+	justify-content: space-between;
+}
+.typing-area input{
+	height: 45px;
+	width: calc(100% - 58px);
+	font-size: 17px;
+	border: 1px solid #ccc;
+	padding: 0 13px;
+	border-radius: 5px 0 5px 0;
+	outline: none;
+}
+.typing-area button{
+	width: 55px;
+	border: none;
+	outline: none;
+	background-color:#fcb21c;
+	color: #fff;
+	font-size: 19px;
+	cursor: pointer;
+	border-radius: 5px 0 5px 0;
+}
+
+
+
+
+
+
+
+
+
